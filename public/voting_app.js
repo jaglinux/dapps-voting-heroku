@@ -36,18 +36,15 @@ window.voteForCandidate = function(candidate) {
 		console.log(form.elements["test"].value);
 		let candidateName = form.elements["test"].value;
 		console.log("jag 1 %s",candidateName);
-      		jag_contractInstance.voteForCandidate(candidateName, {gas: 140000, from: web3.eth.accounts[0]}, function(error, result) {
-			console.log("jag "+ result);
-          		$("#msg").html("Vote is registered in the blockchain and the hash is" + result);
-        		let div_id = candidates[candidateName];
-			total_votes();
-/*
-      			return jag_contractInstance.totalVotesFor.call(name, function(error, v) {
-				console.log("jag 3" + div_id);
-				console.log("jag 4 v is %d",v);
-          			$("#" + div_id).html(v.toString());
-        		});
-*/
+		jag_contractInstance.voteForCandidate.estimateGas(candidateName,{ from: web3.eth.accounts[0]}, function(error, estimate_gas) {
+			console.log("jag estimated gas is " + estimate_gas);
+			estimate_gas += 100;
+      			jag_contractInstance.voteForCandidate(candidateName, {gas: estimate_gas, from: web3.eth.accounts[0]}, function(error, result) {
+				console.log("jag "+ result);
+          			$("#msg").html("Vote is registered in the blockchain and the hash is" + result);
+        			let div_id = candidates[candidateName];
+				total_votes();
+			 });
       		});
 	} else {
 		let candidateName = $("#candidate").val();
