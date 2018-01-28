@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header_main.ejs %>
+</head>
+
+<body class="container">
+<% include ../partials/nav.ejs %>
+  <h3 style="color:red">Voting/dapps : Voting app based on Ethereum Main Blockchain</h3>
+  <h4>Steps to use this app</h5>
+  <h5>1. Use MetaMask plugin to connect to Ethereum blockchain. Download <a href="https://metamask.io/">MetaMask</a></h5>
+  <h5>2. Metamask is a browser extension. Once installed, create an account in Metamask.</h5>
+  <h5>3. Connect to Main Ethereum network in Metamask.</h5>
+  <h5>4. Vote in the below poll. Once vote button is clicked, Metamask will be launched.
+	 Confirm the transaction by clicking Submit button in Metamask.</h5>
+  <h5>5. You can check total votes in "Total Votes registered so far in Main BlockChain" section.
+         You can also verify all transactions related to the voting.</h5>
+  <h4>Feedback welcome. Send email to jagstock7@gmail.com</h6>
+  <h5> Ethereum donation 0xA98C1903CfEfE2cf5E7eD78CF16e17DcF8a566CB </h5>
+  <h3 style="color:red">Opinion Poll - India </h3>
+  <form id="test">
+  <p>
+  <label>BJP</label>
+  <input type="radio" name="test" value="bjp" checked />
+  </p>
+  <p>
+  <label>Cong</label>
+  <input type="radio" name="test" value="con" />
+  </p>
+  <p>
+  <label>Others</label>
+  <input type="radio" name="test" value="oth" />
+  </p>
+  </form>
+  <a href="#" onclick="voteForCandidate()" class="btn btn-info">Vote</a>
+  <div id="msg"></div>
+<!--
+  <input type="text" id="candidate" />
+  <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+-->
+  <br>
+  <h3 style="color:red">Total Votes registered so far in Main BlockChain</h3>
+  <div id="address"></div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Political Party</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color:black">BJP</td>
+          <td id="candidate-1"></td>
+        </tr>
+        <tr>
+          <td style="color:black">Cong</td>
+          <td id="candidate-2"></td>
+        </tr>
+        <tr>
+          <td style="color:black">Others</td>
+          <td id="candidate-3"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b><font size="4"> Contract Address is </font></b> 0x5e8B72d212737Ef6AB1Ae4aC637D8b2d4490e066 </p>
+  <p><b> Click the below link to track the transactions related to the contract </p></b>
+  <p><a href="https://etherscan.io/address/0x5e8b72d212737ef6ab1ae4ac637d8b2d4490e066">Main Network</a></p>
+
+
+</body>
+</html>

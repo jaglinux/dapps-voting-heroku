@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header_test.ejs %>
+</head>
+
+<body class="container">
+<% include ../partials/nav.ejs %>
+  <h3 style="color:red">Voting/dapps : Voting app based on Ethereum Rinkeby test Blockchain</h3>
+  <h4>Steps to use this app</h5>
+  <h5>1. Use MetaMask plugin to connect to Ethereum blockchain. Download <a href="https://metamask.io/">MetaMask</a></h5>
+  <h5>2. Metamask is a browser extension. Once installed, create an account in Metamask.</h5>
+  <h5>3. Connect to Rinkeby network in Metamask. Rinkeby is Ethereum test network but it is public.</h5>
+  <h5>4. Get free Rinkeby Ether. Note that Rinkeby ethers are fake since it is test network. Follow the link in Metamask to get free Ethers</h5>
+  <h5>   or send an email to jagstock7@gmail.com along with your Rinkeby account number. I will send free ethers.</h5>
+  <h5>5. Vote in the below poll. Once vote button is clicked, Metamask will be launched.
+	 Confirm the transaction by clicking Submit button in Metamask.</h5>
+  <h5>6. You can check total votes in "Total Votes registered so far in Rinkeby BlockChain" section.
+         You can also verify all transactions related to the voting.</h5>
+  <h4>Feedback welcome. Send email to jagstock7@gmail.com</h6>
+  <h5> Ethereum donation 0xA98C1903CfEfE2cf5E7eD78CF16e17DcF8a566CB </h5>
+  <h3 style="color:red">Opinion Poll - India </h3>
+  <form id="test">
+  <p>
+  <label>BJP</label>
+  <input type="radio" name="test" value="BJP" checked />
+  </p>
+  <p>
+  <label>Cong</label>
+  <input type="radio" name="test" value="Cong" />
+  </p>
+  <p>
+  <label>Others</label>
+  <input type="radio" name="test" value="Others" />
+  </p>
+  </form>
+  <a href="#" onclick="voteForCandidate()" class="btn btn-info">Vote</a>
+  <div id="msg"></div>
+<!--
+  <input type="text" id="candidate" />
+  <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+-->
+  <br>
+  <h3 style="color:red">Total Votes registered so far in Rinkeby BlockChain</h3>
+  <div id="address"></div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Political Party</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color:black">BJP</td>
+          <td id="candidate-1"></td>
+        </tr>
+        <tr>
+          <td style="color:black">Cong</td>
+          <td id="candidate-2"></td>
+        </tr>
+        <tr>
+          <td style="color:black">Others</td>
+          <td id="candidate-3"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b><font size="4"> Contract Address is </font></b> 0x0F435d2b4f90796B17C539a0f0819FC209ff9e93 </p>
+  <p><b> Click the below link to track the transactions related to the contract </p></b>
+  <p><a href="https://rinkeby.etherscan.io/address/0x0f435d2b4f90796b17c539a0f0819fc209ff9e93">Rinkeby Test Network</a></p>
+
+
+</body>
+</html>
